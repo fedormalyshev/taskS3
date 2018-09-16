@@ -25,5 +25,6 @@ if __name__ == "__main__":
     
     #VALUE_model = joblib.load('VALUE_model')
     
-    port = int(os.environ.get("VCAP_APP_PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
+    #port = int(os.environ.get("VCAP_APP_PORT", 5000))
+    #app.run(host='0.0.0.0', port=port)
+    app.run()
