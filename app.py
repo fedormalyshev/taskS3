@@ -23,7 +23,7 @@ if __name__ == "__main__":
     with open('VALUE_model', 'wb') as file1:
         file1.write(response.content)
     
-    VALUE_model = joblib.load('VALUE_model')
+    #VALUE_model = joblib.load('VALUE_model')
     
     port = int(os.environ.get("VCAP_APP_PORT", 5000))
     app.run(host='0.0.0.0', port=port)
