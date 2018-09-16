@@ -24,7 +24,7 @@ def predict():
     x = VALUE_model.predict(one_row)
     
     #return(csv_url)
-    return(x[0, 0])
+    return(jsonify(x))
     #i = request.args.get('i')
     #print("\n", i)
 
