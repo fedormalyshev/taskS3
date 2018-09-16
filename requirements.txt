@@ -1,3 +1,4 @@
 Flask==0.10.1
 gunicorn==19.9.0
 requests==2.19.1
+pandas==0.23.4
