@@ -14,10 +14,10 @@ app.logger.setLevel(logging.ERROR)
 def predict():
     csv_url = request.args.get('csv_url')
     
-    #one_row = pd.read_csv("https://www.dropbox.com/s/39dak20mpjmss0q/1_row_test.csv?dl=1")
-    #x = VALUE_model.predict(one_row)
-    return(csv_url)
-    #return(type(VALUE_model))
+    one_row = pd.read_csv("https://www.dropbox.com/s/39dak20mpjmss0q/1_row_test.csv?dl=1")
+    x = VALUE_model.predict(one_row)
+    #return(csv_url)
+    return(x)
     #i = request.args.get('i')
     #print("\n", i)
 
