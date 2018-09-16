@@ -16,7 +16,7 @@ def predict():
     
     #one_row = pd.read_csv("https://www.dropbox.com/s/39dak20mpjmss0q/1_row_test.csv?dl=1")
     #x = VALUE_model.predict(one_row)
-    return(csv_url1)
+    return(csv_url)
     #return(type(VALUE_model))
     #i = request.args.get('i')
     #print("\n", i)
@@ -26,7 +26,7 @@ if __name__ == "__main__":
     with open('VALUE_model', 'wb') as file1:
         file1.write(response.content)
     
-    #VALUE_model = joblib.load('VALUE_model')
+    VALUE_model = joblib.load('VALUE_model')
     
     #port = int(os.environ.get("VCAP_APP_PORT", 5000))
     #app.run(host='0.0.0.0', port=port)
