@@ -10,6 +10,12 @@ app = Flask(__name__)
 app.logger.addHandler(logging.StreamHandler(sys.stdout))
 app.logger.setLevel(logging.ERROR)
 
+response = requests.get('https://www.dropbox.com/s/f3zomahc0ri9q4j/VALUEreg.pkl?dl=1')
+with open('VALUE_model', 'wb') as file1:
+    file1.write(response.content)
+    
+VALUE_model = joblib.load('VALUE_model')
+
 @app.route("/predict")
 def predict():
     csv_url = request.args.get('csv_url')
@@ -22,12 +28,6 @@ def predict():
     #print("\n", i)
 
 if __name__ == "__main__":
-    response = requests.get('https://www.dropbox.com/s/f3zomahc0ri9q4j/VALUEreg.pkl?dl=1')
-    with open('VALUE_model', 'wb') as file1:
-        file1.write(response.content)
-    
-    VALUE_model = joblib.load('VALUE_model')
-    
     #port = int(os.environ.get("VCAP_APP_PORT", 5000))
     #app.run(host='0.0.0.0', port=port)
     app.run()
