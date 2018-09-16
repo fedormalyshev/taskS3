@@ -12,7 +12,7 @@ def predict():
     
     #one_row = pd.read_csv("https://www.dropbox.com/s/39dak20mpjmss0q/1_row_test.csv?dl=1")
     #x = VALUE_model.predict(one_row)
-    return(csv_url)
+    return(csv_url1)
     #return(type(VALUE_model))
     #i = request.args.get('i')
     #print("\n", i)
