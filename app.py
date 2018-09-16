@@ -34,7 +34,7 @@ X3_model = joblib.load('X3_model')
 def predict():
     
     csv_url = request.args.get('csv_url')
-    one_row = pd.read_csv("https://www.dropbox.com/s/39dak20mpjmss0q/1_row_test.csv?dl=1")
+    one_row = pd.read_csv(csv_url)
     v = VALUE_model.predict(one_row)
     y = Y3_model.predict(one_row)
     x = X3_model.predict(one_row)
