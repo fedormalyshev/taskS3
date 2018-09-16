@@ -1,8 +1,8 @@
 import os
 #import pickle
-import requests
-import pandas as pd
-from sklearn.externals import joblib
+#import requests
+#import pandas as pd
+#from sklearn.externals import joblib
 from flask import Flask, jsonify, request
 app = Flask(__name__)
 
@@ -19,9 +19,9 @@ def predict():
 
 if __name__ == "__main__":
     
-    response = requests.get('https://www.dropbox.com/s/f3zomahc0ri9q4j/VALUEreg.pkl?dl=1')
-    with open('VALUE_model', 'wb') as file1:
-        file1.write(response.content)
+    #response = requests.get('https://www.dropbox.com/s/f3zomahc0ri9q4j/VALUEreg.pkl?dl=1')
+    #with open('VALUE_model', 'wb') as file1:
+    #    file1.write(response.content)
     
     #VALUE_model = joblib.load('VALUE_model')
     
